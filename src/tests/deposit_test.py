@@ -328,7 +328,7 @@ def test_deposit_confirm_external_id(
             status_code=400,
             headers={},
             url="",
-            text=json.dumps(dict(status=400, result_xdr=TRUSTLINE_FAILURE_XDR)),
+            text=json.dumps({"status": 400, "extras": {"result_xdr": TRUSTLINE_FAILURE_XDR}}),
         )
     ),
 )
